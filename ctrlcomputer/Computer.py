@@ -121,7 +121,6 @@ class OperationalSistem():
 			uptime_mins = int((uptime_value_seconds - (uptime_hour * 3600)) / 60)
 			uptime_secs = int(uptime_value_seconds - (uptime_hour * 3600) - (uptime_mins * 60))
 			self.sistem_uptime = str("{0:2}:{1:2}:{2:2}".format(uptime_hour, uptime_mins, uptime_secs))
-			print(self.sistem_uptime)
 
 		with open(self.version_file_name) as version:
 			self.sistem_version = version.readline().strip()
